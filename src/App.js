@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   handleKeyDown = (e) => {
-    let errorCount = 0;
+    let matchedTag = false;
     if (e.key === 'Enter') {
       if (e.target.value.length > 0) {
         if (this.state.tags.length > 0) {
@@ -26,10 +26,10 @@ class App extends Component {
                   error: false
                 })
               }, 3000)
-              errorCount++
+              matchedTag = true
             }
           })
-          if (errorCount === 0) {
+          if (!matchedTag) {
             const tags = this.state.tags;
             tags.push(e.target.value)
             this.setState({
@@ -46,6 +46,21 @@ class App extends Component {
       }
       e.target.value = null;
     }
+    if(e.key === 'Backspace'){
+      if(e.target.value.length <= 0){
+        this.state.tags.splice(this.state.tags.length - 1, 1)
+        this.setState({
+          tags: this.state.tags
+        })
+      }
+    }
+  }
+
+  removeTag = (index) => {
+    this.state.tags.splice(index, 1);
+    this.setState({
+      tags: this.state.tags
+    })
   }
 
   render() {
@@ -55,7 +70,7 @@ class App extends Component {
           this.state.tags.map((item, i) => (
             <span className="tag" key={i}>
               <span className="content">{item}    </span>
-              <span className="close">X</span>
+              <span className="close" onClick={() => this.removeTag(i)}>X</span>
             </span>
           ))
         }
