@@ -1,0 +1,13 @@
+.tag {
+    background-color: #fbbd08;
+    padding: 10px;
+    color: #000;
+    cursor: default;
+    font-size: 14px;
+    margin: 10px;
+  }
+  
+  .tag .close {
+    font-size: 12px;
+    cursor: pointer;
+  }
