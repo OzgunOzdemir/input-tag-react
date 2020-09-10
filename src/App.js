@@ -8,13 +8,14 @@ class App extends Component {
 
     this.state = {
       value: "deneme,test",
+      selectedTheme: "warning",
     }
   }
-
+  
   render() {
     return (
       <Fragment>
-        <Tags value={this.state.value}/>
+        <Tags value={this.state.value} selectedTheme={this.state.selectedTheme}/>
       </Fragment>
     );
   }

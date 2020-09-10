@@ -80,7 +80,7 @@ class Tags extends Component {
             <div className="tag-container">
                 {
                     this.state.tags.map((item, i) => (
-                        <Tag key={i} item={item} onRemove={() => this.removeTag(i)} />
+                        <Tag key={i} item={item} selectedTheme={this.props.selectedTheme} onRemove={() => this.removeTag(i)} />
                     ))
                 }
 
