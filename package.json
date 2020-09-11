@@ -1,7 +1,13 @@
 {
   "name": "input-tag-react",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Input Tag React Component",
+  "main": "Tags.react",
+  "author": "ozgunozdemir | Özgün Özdemir ozgunozdemir92@gmail.com",
+  "license": "ISC",
+  "keywords":[
+    "reactjs, input, tag, component"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
