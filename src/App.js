@@ -15,7 +15,14 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Tags value={this.state.value} selectedTheme={this.state.selectedTheme}/>
+        <Tags value={this.state.value} selectedTheme={"primary"}/>
+        <Tags value={this.state.value} selectedTheme={"success"}/>
+        <Tags value={this.state.value} selectedTheme={"secondary"}/>
+        <Tags value={this.state.value} selectedTheme={"info"}/>
+        <Tags value={this.state.value} selectedTheme={"warning"}/>
+        <Tags value={this.state.value} selectedTheme={"danger"}/>
+        <Tags value={this.state.value} selectedTheme={"light"}/>
+        <Tags value={this.state.value} selectedTheme={"dark"}/>
       </Fragment>
     );
   }

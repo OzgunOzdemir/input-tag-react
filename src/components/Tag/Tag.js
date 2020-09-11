@@ -1,26 +1,32 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import './Tags.css'
+import './Tag.css'
 
 const Tag = ({ key, item, onRemove, selectedTheme }) => {
     const [color, setColor] = useState()
     const [theme, setTheme] = useState([{
         type: "primary",
-        color: "#004085"
+        color: "#007bff"
     }, {
         type: "success",
-        color: "#D5EDD8"
+        color: "#28a745"
     }, {
         type: "secondary",
-        color: "#383d41"
+        color: "#6c757d"
     }, {
         type: "info",
-        color: "#0c5460"
+        color: "#17a2b8"
     }, {
         type: "warning",
         color: "#856404"
     }, {
         type: "danger",
-        color: "#721c24"
+        color: "#dc3545"
+    },{
+        type: "light",
+        color: "#f8f9fa"
+    },{
+        type: "dark",
+        color: "#343a40"
     }]);
 
     useEffect(() => {
